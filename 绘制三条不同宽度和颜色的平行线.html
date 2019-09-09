@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<div class="content_body">
+    <canvas class="canvas" width="700px" height="400px"></canvas>
+</div>
+<script>
+    let canvas = document.getElementsByClassName("canvas")[0];
+    let ctx = canvas.getContext('2d');
+
+    ctx.beginPath();//开启新路径
+    ctx.moveTo(100, 100);//移动画笔（x轴，y轴）
+    ctx.lineTo(200, 100);//绘制直线（轨迹，绘制路径）
+    ctx.strokeStyle="red";
+    ctx.lineWidth=10;
+    // ctx.lineHeight=10;
+    ctx.stroke();//描边
+
+    ctx.beginPath();//开启新路径
+    ctx.moveTo(100, 150);//移动画笔（x轴，y轴）
+    ctx.lineTo(300, 150);//绘制直线（轨迹，绘制路径）
+    ctx.lineWidth=15;
+    ctx.strokeStyle='blue';
+    ctx.stroke();//描边
+
+    ctx.beginPath();//开启新路径
+    ctx.moveTo(100, 200);//移动画笔（x轴，y轴）
+    ctx.lineTo(400, 200);//绘制直线（轨迹，绘制路径）
+    ctx.lineWidth=20;
+    ctx.strokeStyle='yellow';
+    ctx.stroke();//描边
+</script>
+</body>
+</html>

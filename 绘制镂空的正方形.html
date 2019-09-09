@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<div class="content_body">
+    <canvas class="canvas" width="700px" height="500px"></canvas>
+</div>
+<script>
+    let canvas = document.getElementsByClassName("canvas")[0];
+    let ctx = canvas.getContext('2d');
+    // 大正方形300
+    ctx.moveTo(100, 100);//移动画笔（x轴，y轴）
+    ctx.lineTo(400, 100);//绘制直线（轨迹，绘制路径）
+    ctx.lineTo(400, 400);//绘制直线（轨迹，绘制路径）
+    ctx.lineTo(100, 400);//绘制直线（轨迹，绘制路径）
+    ctx.closePath();
+
+    // 小正方形200
+    ctx.moveTo(150, 150);//移动画笔（x轴，y轴）
+    ctx.lineTo(150, 350);//绘制直线（轨迹，绘制路径）
+    ctx.lineTo(350, 350);//绘制直线（轨迹，绘制路径）
+    ctx.lineTo(350, 150);//绘制直线（轨迹，绘制路径）
+
+
+    ctx.closePath();
+    // ctx.stroke();//描边
+
+    ctx.fill();//填充
+</script>
+</body>
+</html>
