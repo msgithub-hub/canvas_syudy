@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<div class="content_body">
+    <canvas class="canvas" width="700px" height="400px"></canvas>
+</div>
+<script>
+    let canvas = document.getElementsByClassName("canvas")[0];
+    let ctx = canvas.getContext('2d');
+    ctx.rotate(Math.PI/6);
+    ctx.strokeRect(100,100,200,50);//快速画图方式
+</script>
+</body>
+</html>
